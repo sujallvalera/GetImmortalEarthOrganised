@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Immortal Earth</title>
+    <link rel="stylesheet" type="text/css" href="ngt.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Kanit">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <script src="https://climateclock.world/widget-v2.js" async></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <header>
+        <climate-clock />
+    </header>
+    <header class="navigation">
+        <h1 style="margin-left: 0;"><span style="color: #d82f31">GET</span>
+            <span style="color: #4aa1cc"> IMMORTAL </span>
+            <span>🌍</span>
+            <span id="mobileNavButton" class="open-window-text" onclick="openModal()">≡</span>
+        </h1>
+        <nav id="bigScreenNav" class="navBar">
+            <ul>
+                <li><a href="/home.html" class="nav-button">HOME</a></li>
+                <li class="nav-item dropdown">
+                    <div class="dropdown">
+                        <a href="#" class="nav-button">NEWS</a>
+                        <div class="dropdown-content">
+                            <a href="/nationalnews.html">INDIA</a>
+                            <a href="/internationalnews.html">WORLD</a>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="/people.html" class="nav-button">PEOPLE</a></li>
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-button">CAREER</a>
+                    <div class="dropdown-content">
+                        <a href="/education.html">HIGHER STUDIES</a>
+                        <a href="/comingsoon.html">INFO</a>
+                        <a href="/ngo.html">NGOs</a>
+                        <a href="/comingsoon.html">JOBS</a>
+                        <a href="/ministries.html">MINISTRIES</a>
+                    </div>
+                </li>
+                <li><a href="/people.html" class="nav-button">CONNECT</a></li>
+
+                <li class="nav-item dropdown">
+                    <div class="dropdown">
+                        <a href="#" class="nav-button">LEGISLATIONS</a>
+                        <div class="dropdown-content">
+                            <a href="/ngt.html">NGT</a>
+                            <a href="/laws.html">LAWS</a>
+                            <a href="/comingsoon.html">ACTS</a>
+                            <a href="/comingsoon.html">NOTIFICATIONS</a>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="/comingsoon.html" class="nav-button">ABOUT US</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <!-- Modal Window -->
+    <div class="modal-container" id="modal">
+        <div class="modal-content">
+            <span class="close-modal-button" onclick="closeModal()">&times;</span>
+            <!-- Content for the modal window (navigation buttons) -->
+            <nav>
+                <ul>
+                    <li><a href="/home.html" class="nav-button">HOME</a></li>
+                    <li class="nav-item dropdown">
+                        <div class="dropdown">
+                            <a href="#" class="nav-button">NEWS</a>
+                            <div class="dropdown-content">
+                                <a href="/comingsoon.html">INDIA</a>
+                                <a href="/comingsoon.html">WORLD</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="/people.html" class="nav-button">PEOPLE</a></li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-button">CAREER</a>
+                        <div class="dropdown-content">
+                            <a href="/education.html">HIGHER STUDIES</a>
+                            <a href="/comingsoon.html">INFO</a>
+                            <a href="/ngo.html">NGOs</a>
+                            <a href="/comingsoon.html">JOBS</a>
+                            <a href="/ministries.html">MINISTRIES</a>
+                        </div>
+                    </li>
+                    <li><a href="/comingsoon.html" class="nav-button">CONNECT</a></li>
+
+                    <li class="nav-item dropdown">
+                        <div class="dropdown">
+                            <a href="#" class="nav-button">LEGISLATIONS</a>
+                            <div class="dropdown-content">
+                                <a href="/ngt.html">NGT</a>
+                                <a href="/laws.html">LAWS</a>
+                                <a href="/comingsoon.html">ACTS</a>
+                                <a href="/comingsoon.html">NOTIFICATIONS</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="/comingsoon.html" class="nav-button">ABOUT US</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <script>
+        const navButton = document.getElementById("mobileNavButton");
+        const bigScreenNavButton = document.getElementById("bigScreenNav");
+        const modal = document.getElementById("modal");
+        const earth = document.getElementById("earth");
+
+        // Check if the user is on a mobile device
+        const isMobileNav = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
+        if (isMobileNav) {
+            navButton.style.display = 'block';
+            bigScreenNavButton.style.display = 'none';
+            modal.style.display = 'none';
+
+        }
+
+        else {
+            navButton.style.display = 'none';
+            modal.style.display = 'none';
+        }
+        // JavaScript functions to open and close the modal window
+        function openModal() {
+            const modal = document.getElementById('modal');
+            modal.style.display = 'flex';
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('modal');
+            modal.style.display = 'none';
+        }
+
+        window.addEventListener('click', function (event) {
+            const modal = document.getElementById('modal');
+            if (event.target === modal) {
+                closeModal();
+            }
+        });
+    </script>
+
+    <script src="navBarScroll.js"></script>
+
+    <div class="background" id="earth"></div>
+
+    <div class="scroll-down-button" id="scroll-down-button">⬇️</div>
+    <script>
+        // JavaScript to show the scroll-down button on mobile devices
+        const scrollDownButton = document.getElementById("scroll-down-button");
+
+        // Check if the user is on a mobile device
+        const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
+        if (isMobile) {
+            scrollDownButton.style.display = "block"; // Show the button on mobile devices
+        }
+
+        // Add a click event listener to scroll to the next section
+        scrollDownButton.addEventListener("click", () => {
+            window.scrollBy({
+                top: window.innerHeight,
+                behavior: "smooth"
+            });
+        });
+
+    </script>
+
+
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            overflow-x: auto;
+            margin-left: -10px;
+            margin-top: 20px;
+
+        }
+
+        th,
+        td {
+            border: 1px solid #1a7431;
+            text-align: left;
+            padding: 8px;
+            color: rgb(255, 255, 255);
+            font-size: 18px;
+        }
+
+        td {
+            font-weight: normal;
+        }
+
+        th {
+            background-color: rgba(0, 0, 0, 0);
+            margin-left: 20px;
+        }
+
+        td a {
+            color: white;
+        }
+
+
+        td a:visited {
+            color: #1a7431;
+        }
+
+        @media only screen and (max-width: 768px) {
+
+            .table-heading p {
+                font-size: 18px;
+                text-align: center;
+                padding: auto;
+                margin-right: 30px;
+            }
+
+
+            td,
+            th {
+                font-size: 12px;
+                padding: 3px;
+                /* Adjust padding for better mobile layout */
+                align-items: center;
+            }
+
+            td a {
+                padding: 4px 6px;
+                /* Adjust padding for better mobile layout */
+            }
+
+        }
+    </style>
+
+
+    <section class="table-container">
+        <div class="table-background" id="table-background"></div>
+        <h2 class="table-heading">
+            <p>The National Green Tribunal is a statutory body in India that deals with expeditious disposal of cases
+                related to
+                environmental protection and other natural resources. It was set up under the National Green Tribunal
+                Act in 2010.
+            </p>
+            <p>These are some of the landmark cases of NGT:</p>
+        </h2>
+        <table>
+            <tr>
+                <th>Sr No.</th>
+                <th>Case Name</th>
+                <th>Case in Brief</th>
+                <th>Link</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>M.C. Mehta & Anr. Etc vs Union Of India & Ors. Etc (1986) Case</td>
+                <td>The then Chief Justice of India, Justice P.N. Bhagwati had suggested setting up Environmental
+                    Courts
+                    because:
+
+                    <li> Due to more cases involving issues of environmental pollution, ecological destruction
+                        and conflicts
+                        over
+                        natural resources.
+                    </li>
+                    <li> Increasing need for assessment and evolution of scientific and technical data regarding
+                        environmental
+                        matters.
+                    </li>
+                </td>
+                <td><a href="https://blog.ipleaders.in/mc-mehta-vs-union-of-india-1986-case-analysis/">Visit</a>
+                </td>
+            </tr>
+            <tr>
+            <tr>
+                <td>2</td>
+                <td>A.P. Pollution Control Board vs Prof. M.V. Nayudu (1999) Case</td>
+                <td>The Supreme Court in the landmark case, emphasised on the need for a court that was “a
+                    combination of a
+                    Judge and Technical Experts” with an appeal to the Supreme Court from the Environmental Court.
+                </td>
+                <td><a href="https://calr.in/a-p-pollution-control-board-v-prof-m-v-nayudu-retd-ors/">Visit</a></td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Samit Mehta vs. Union of India and Ors.</td>
+                <td>This case was held to involve questions of public importance and significance of environmental
+                    jurisprudence.
+
+                    <li>In this case, an environmentalist filed applications in relation to the damage caused to
+                        the sinking of
+                        a ship named M. V. Rak which was carrying huge amounts of coal, fuel oil and diesel.
+                    </li>
+                    <li>
+                        As a result of the ship’s sinking close to the coast of south Mumbai, a thick film of
+                        oil was formed on
+                        the surface of the sea and large-scale damage was caused to mangroves and marine
+                        ecosystem.
+                    </li>
+
+                </td>
+                <td><a href="https://lawfoyer.in/case-analysis-samir-mehta/">Visit</a></td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Save Mon Federation Vs Union of India Case</td>
+                <td>In the Save Mon Federation Vs Union of India case, the NGT suspended a ₹6,400-crore hydro
+                    project, to save
+                    the habitat of a bird.
+
+                </td>
+                <td><a href="https://elaw.org/system/files/savemon.pdf">Visit</a></td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Almitra H. Patel & Ors. vs. Union of India and Ors. Case</td>
+                <td>Decided less than a year ago, this case has been the single biggest landmark case dealing with
+                    the issue of
+                    solid waste management in India.
+                    <li> In this case, Mrs. Almitra Patel and another had filed a PIL under Article 32 of the
+                        Constitution of
+                        India before the Apex Court whereby the Petitioner sought the immediate and urgent
+                        improvement in the
+                        practices that are presently adopted for the way Municipal Solid Waste or garbage is
+                        treated in India.
+                    </li>
+                    <li>
+                        The Tribunal found that the magnitude of the problem was gigantic because over a lakh
+                        tonnes of raw
+                        garbage is dumped every day and there is no proper treatment of this raw garbage which
+                        is dumped just
+                        outside the city limits on land, along highway, lakes, nalas etc.</li>
+                    <li>The Tribunal noted the requirement of conversion of this waste into a source of power
+                        and fuel to be
+                        used for society’s benefit, taking into consideration the Principles of Circular
+                        Economy.
+                    </li>
+                </td>
+                <td><a href="https://lawfoyer.in/almitra-h-patel-vs-union-of/">Visit</a></td>
+            </tr>
+
+            <!-- Add more rows as needed -->
+        </table>
+
+    </section>
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var tableContainer = document.querySelector('.table-container');
+            var earthBackground = document.getElementById('earth');
+            var tableBackground = document.getElementById('table-background');
+            const isMobileNav = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
+
+            var handleScroll = function () {
+                var containerTop = tableContainer.getBoundingClientRect().top;
+
+                if (containerTop <= window.innerHeight) {
+                    if (isMobileNav) {
+
+                    }
+                    else {
+                        // News container is visible
+                        earthBackground.style.opacity = 0;
+                        tableBackground.style.opacity = 1;
+                        tableBackground.style.visibility = 'visible';
+
+                        // Trigger the animation
+                        tableContainer.classList.add('animate-up');
+                        tableBackground.style.opacity = 0.2;
+                    }
+
+
+                } else {
+                    if (isMobileNav) {
+
+                    }
+
+                    else {
+                        // Earth background is visible
+                        earthBackground.style.opacity = 1;
+                        tableBackground.style.opacity = 0;
+                        tableBackground.style.visibility = 'hidden';
+
+                        // Reset the animation
+                        tableContainer.classList.remove('animate-up');
+                    }
+
+                }
+            };
+
+            window.addEventListener('scroll', handleScroll);
+        });
+    </script>
+
+    <footer>
+        <p>&copy; 2023 Get Immortal Earth</p>
+
+    </footer>
+</body>
+
+</html>

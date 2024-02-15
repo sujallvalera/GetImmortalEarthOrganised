@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Immortal Earth</title>
+    <link rel="stylesheet" type="text/css" href="education.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Kanit">
+    <script src="https://climateclock.world/widget-v2.js" async></script>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <header>
+        <climate-clock />
+    </header>
+    <header class="navigation">
+        <h1 style="margin-left: 0;"><span style="color: #d82f31">GET</span>
+            <span style="color: #4aa1cc"> IMMORTAL </span>
+            <span>🌍</span>
+            <span id="mobileNavButton" class="open-window-text" onclick="openModal()">≡</span>
+        </h1>
+        <nav id="bigScreenNav" class="navBar">
+            <ul>
+                <li><a href="/home.html" class="nav-button">HOME</a></li>
+                <li class="nav-item dropdown">
+                    <div class="dropdown">
+                        <a href="#" class="nav-button">NEWS</a>
+                        <div class="dropdown-content">
+                            <a href="/nationalnews.html">INDIA</a>
+                            <a href="/internationalnews.html">WORLD</a>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="/people.html" class="nav-button">PEOPLE</a></li>
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-button">CAREER</a>
+                    <div class="dropdown-content">
+                        <a href="/education.html">HIGHER STUDIES</a>
+                        <a href="/comingsoon.html">INFO</a>
+                        <a href="/ngo.html">NGOs</a>
+                        <a href="/comingsoon.html">JOBS</a>
+                        <a href="/ministries.html">MINISTRIES</a>
+                    </div>
+                </li>
+                <li><a href="/people.html" class="nav-button">CONNECT</a></li>
+
+                <li class="nav-item dropdown">
+                    <div class="dropdown">
+                        <a href="#" class="nav-button">LEGISLATIONS</a>
+                        <div class="dropdown-content">
+                            <a href="/ngt.html">NGT</a>
+                            <a href="/laws.html">LAWS</a>
+                            <a href="/comingsoon.html">ACTS</a>
+                            <a href="/comingsoon.html">NOTIFICATIONS</a>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="/comingsoon.html" class="nav-button">ABOUT US</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <!-- Modal Window -->
+    <div class="modal-container" id="modal">
+        <div class="modal-content">
+            <span class="close-modal-button" onclick="closeModal()">&times;</span>
+            <!-- Content for the modal window (navigation buttons) -->
+            <nav>
+                <ul>
+                    <li><a href="/home.html" class="nav-button">HOME</a></li>
+                    <li class="nav-item dropdown">
+                        <div class="dropdown">
+                            <a href="#" class="nav-button">NEWS</a>
+                            <div class="dropdown-content">
+                                <a href="/comingsoon.html">INDIA</a>
+                                <a href="/comingsoon.html">WORLD</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="/people.html" class="nav-button">PEOPLE</a></li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-button">CAREER</a>
+                        <div class="dropdown-content">
+                            <a href="/education.html">HIGHER STUDIES</a>
+                            <a href="/comingsoon.html">INFO</a>
+                            <a href="/ngo.html">NGOs</a>
+                            <a href="/comingsoon.html">JOBS</a>
+                            <a href="/ministries.html">MINISTRIES</a>
+                        </div>
+                    </li>
+                    <li><a href="/comingsoon.html" class="nav-button">CONNECT</a></li>
+
+                    <li class="nav-item dropdown">
+                        <div class="dropdown">
+                            <a href="#" class="nav-button">LEGISLATIONS</a>
+                            <div class="dropdown-content">
+                                <a href="/ngt.html">NGT</a>
+                                <a href="/laws.html">LAWS</a>
+                                <a href="/comingsoon.html">ACTS</a>
+                                <a href="/comingsoon.html">NOTIFICATIONS</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="/comingsoon.html" class="nav-button">ABOUT US</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <script>
+        const navButton = document.getElementById("mobileNavButton");
+        const bigScreenNavButton = document.getElementById("bigScreenNav");
+        const modal = document.getElementById("modal");
+        const earth = document.getElementById("earth");
+
+        // Check if the user is on a mobile device
+        const isMobileNav = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
+        if (isMobileNav) {
+            navButton.style.display = 'block';
+            bigScreenNavButton.style.display = 'none';
+            modal.style.display = 'none';
+
+        }
+
+        else {
+            navButton.style.display = 'none';
+            modal.style.display = 'none';
+        }
+        // JavaScript functions to open and close the modal window
+        function openModal() {
+            const modal = document.getElementById('modal');
+            modal.style.display = 'flex';
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('modal');
+            modal.style.display = 'none';
+        }
+
+        window.addEventListener('click', function (event) {
+            const modal = document.getElementById('modal');
+            if (event.target === modal) {
+                closeModal();
+            }
+        });
+    </script>
+
+    <script src="navBarScroll.js"></script>
+
+    <div class="background" id="earth"></div>
+
+    <div class="scroll-down-button" id="scroll-down-button">⬇️</div>
+    <script>
+        // JavaScript to show the scroll-down button on mobile devices
+        const scrollDownButton = document.getElementById("scroll-down-button");
+
+        // Check if the user is on a mobile device
+        const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
+        if (isMobile) {
+            scrollDownButton.style.display = "block"; // Show the button on mobile devices
+        }
+
+        // Add a click event listener to scroll to the next section
+        scrollDownButton.addEventListener("click", () => {
+            window.scrollBy({
+                top: window.innerHeight,
+                behavior: "smooth"
+            });
+        });
+
+    </script>
+
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            overflow-x: auto;
+
+        }
+
+        th,
+        td {
+            border: 1px solid #1a7431;
+            text-align: left;
+            padding: 8px;
+            margin-left: 20px;
+            color: white;
+        }
+
+        th {
+            background-color: rgba(0, 0, 0, 0);
+            margin-left: 20px;
+        }
+
+        td a {
+            color: white;
+        }
+
+        td a:visited {
+            color: #1a7431;
+        }
+
+        @media only screen and (max-width: 768px) {
+
+            .table-heading p {
+                font-size: 18px;
+                text-align: center;
+                padding: auto;
+                margin-right: 30px;
+            }
+
+
+            td,
+            th {
+                font-size: 12px;
+                padding: 3px;
+                /* Adjust padding for better mobile layout */
+                align-items: center;
+            }
+
+            td a {
+                padding: 4px 6px;
+                /* Adjust padding for better mobile layout */
+            }
+
+        }
+    </style>
+
+
+    <section class="table-container">
+        <div class="table-background" id="table-background"></div>
+        <h2 class="table-heading">
+            <p>The top colleges offering Masters in Environmental Engineering in <b><u>INDIA</u></b> are listed below.
+            </p>
+        </h2>
+
+        <table>
+            <tr>
+                <th>Institute Name</th>
+                <th>Admission through</th>
+                <th>Link</th>
+                <th>Institute Name</th>
+                <th>Admission through</th>
+                <th>Link</th>
+            </tr>
+            <tr>
+                <td>IIT Madras
+                </td>
+                <td>GATE</td>
+                <td><a href="http://www.iitm.ac.in/">Visit</a></td>
+                <td>Jadavpur University, Kolkata</td>
+                <td>College Entrance Exam</td>
+                <td><a href="http://www.jaduniv.edu.in/">Visit</a></td>
+            </tr>
+            <tr>
+                <td>IIT Bombay
+                </td>
+                <td>GATE</td>
+                <td><a href="http://www.iitb.ac.in/">Visit</a></td>
+                <td>BITS Pilani
+                </td>
+                <td>BITSAT</td>
+                <td><a href="http://www.bits-pilani.ac.in/">Visit</a></td>
+            </tr>
+            <tr>
+                <td>IIT Delhi
+                </td>
+                <Td>GATE
+                <td><a href="http://www.iitd.ac.in/">Visit</a></td>
+                <td>NIT Calicut
+                </td>
+                <td>GATE</td>
+                <td><a href="http://www.nitc.ac.in/">Visit</a></td>
+            </tr>
+            <tr>
+                <td>IIT Kharagpur
+                </td>
+                <td>GATE
+                <td><a href="http://www.iitd.ac.in/">Visit</a></td>
+                <td>IIT Varanasi
+                </td>
+                <td>GATE</td>
+                <td><a href="http://www.iitbhu.ac.in/">Visit</a></td>
+            </tr>
+            <tr>
+                <td>IIT Kanpur
+                </td>
+                <td>GATE</td>
+                <td><a href="http://www.iitk.ac.in/">Visit</a></td>
+                <td>IIT Patna
+                </td>
+                <td>GATE</td>
+                <td><a href="http://www.iitp.ac.in/">Visit</a></td>
+            </tr>
+            <tr>
+                <td>IIT Roorke
+                </td>
+                <td>GATE</td>
+                <td><a href="http://www.iitr.ac.in/">Visit</a></td>
+                <td>NIT Rourkela
+                </td>
+                <td>GATE</td>
+                <td><a href="http://www.nitrkl.ac.in/">Visit</a></td>
+            </tr>
+            <tr>
+                <td>NIT Trichy
+                </td>
+                <td>GATE</td>
+                <td><a href="http://www.nitt.edu/">Visit</a></td>
+                <td>IIT Bhubaneshwar
+                </td>
+                <td>GATE</td>
+                <td><a href="http://www.iitbbs.ac.in/">Visit</a></td>
+            </tr>
+            <tr>
+                <td>NIT Surathkal
+                </td>
+                <td>GATE</td>
+                <td><a href="http://www.nitk.ac.in/">Visit</a></td>
+                <td>NIT Durgapur
+                </td>
+                <td>GATE</td>
+                <td><a href="http://www.nitdgp.ac.in/">Visit</a></td>
+            </tr>
+            <tr>
+                <td>IIT Guhwati
+                </td>
+                <td>GATE</td>
+                <td><a href="http://www.iitg.ac.in/">Visit</a></td>
+                <td>MNIT Jaipur
+                </td>
+                <td>GATE</td>
+                <td><a href="http://www.mnit.ac.in/">Visit</a></td>
+            </tr>
+            <tr>
+                <td>Anna University, Chennai
+                </td>
+                <td>TANCET</td>
+                <td><a href="http://www.annauniv.edu/">Visit</a></td>
+                <td>IIT Indore
+                </td>
+                <td>GATE</td>
+                <td><a href="http://www.iiti.ac.in/">Visit</a></td>
+            </tr>
+            <tr>
+                <td>Indian School of Mines, Dhanbad
+                </td>
+                <td>GATE</td>
+                <td><a href="https://www.iitism.ac.in/">Visit</a></td>
+                <td>Delhi Technological University (DTU), Delhi
+                </td>
+                <td>College Entrace Test</td>
+                <td><a href="https://dtu.ac.in/">Visit</a></td>
+            </tr>
+        </table>
+        <table>
+            <style>
+                .world-table-heading {
+                    margin-top: 10px;
+                }
+
+                .world-table-heading p {
+                    color: #1a7431;
+                    font-size: 30px;
+                    margin-bottom: 10px;
+                    text-align: left;
+                }
+
+                @media only screen and (max-width: 768px) {
+
+                    .world-table-heading p {
+                        font-size: 18px;
+                        text-align: center;
+                        padding: auto;
+                        margin-right: 0px;
+                    }
+
+
+                }
+            </style>
+            <h2 class="world-table-heading">
+                <p>The top colleges offering Masters in Environmental Engineering in <b><u>WORLD</u></b> are listed
+                    below.
+                </p>
+            </h2>
+            <tr>
+                <th>Institute Name</th>
+                <th>Country</th>
+                <th>Link</th>
+                <th>Institute Name</th>
+                <th>Country</th>
+                <th>Link</th>
+            </tr>
+            <tr>
+                <td>Standford University
+                </td>
+                <td>USA</td>
+                <td><a href="https://cee.stanford.edu/environmental-engineering">Visit</a></td>
+                <td>University of British Columbia</td>
+                <td>Canada</td>
+                <td><a href="https://civil.ubc.ca/">Visit</a></td>
+            </tr>
+            <tr>
+                <td>Massachusetts Institute of Technology (MIT)
+                </td>
+                <td>USA</td>
+                <td><a href="http://cee.mit.edu/">Visit</a></td>
+                <td>University of Michigan
+                </td>
+                <td>USA</td>
+                <td><a href="https://cee.engin.umich.edu/about/">Visit</a></td>
+            </tr>
+            <tr>
+                <td>University of California
+                </td>
+                <Td>USA
+                <td><a href="https://ce.berkeley.edu/programs/env">Visit</a></td>
+                <td>Tsinghua University
+                </td>
+                <td>China</td>
+                <td><a href="https://www.tsinghua.edu.cn/enven/">Visit</a></td>
+            </tr>
+            <tr>
+                <td>Imperial College London
+                </td>
+                <Td>UK
+                <td><a
+                        href="https://www.imperial.ac.uk/study/courses/undergraduate/ecology-environmental-biology/">Visit</a>
+                </td>
+                <td>National University of Singapore (NUS)
+                </td>
+                <td>Singapore</td>
+                <td><a href="https://cde.nus.edu.sg/cee/">Visit</a></td>
+            </tr>
+        </table>
+    </section>
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var newsContainer = document.querySelector('.table-container');
+            var earthBackground = document.getElementById('earth');
+            var newsBackground = document.getElementById('table-background');
+            const isMobileNav = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
+
+            var handleScroll = function () {
+                var containerTop = newsContainer.getBoundingClientRect().top;
+
+                if (containerTop <= window.innerHeight) {
+                    if (isMobileNav) {
+
+                    }
+                    else {
+                        // News container is visible
+                        earthBackground.style.opacity = 0;
+                        newsBackground.style.opacity = 1;
+                        newsBackground.style.visibility = 'visible';
+
+                        // Trigger the animation
+                        newsContainer.classList.add('animate-up');
+                        newsBackground.style.opacity = 0.2;
+                    }
+
+
+                } else {
+                    if (isMobileNav) {
+
+                    }
+
+                    else {
+                        // Earth background is visible
+                        earthBackground.style.opacity = 1;
+                        newsBackground.style.opacity = 0;
+                        newsBackground.style.visibility = 'hidden';
+
+                        // Reset the animation
+                        newsContainer.classList.remove('animate-up');
+                    }
+
+                }
+            };
+
+            window.addEventListener('scroll', handleScroll);
+        });
+    </script>
+
+    <footer>
+        <p>&copy; 2023 Get Immortal Earth</p>
+
+    </footer>
+</body>
+
+</html>

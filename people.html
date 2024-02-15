@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Immortal Earth</title>
+    <link rel="stylesheet" type="text/css" href="people.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Kanit">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <script src="https://climateclock.world/widget-v2.js" async></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <header>
+        <climate-clock/>
+    </header>
+    <header class="navigation">
+        <h1 style="margin-left: 0;"><span style="color: #d82f31">GET</span>
+            <span style="color: #4aa1cc"> IMMORTAL </span>
+            <span>🌍</span>
+            <span id="mobileNavButton" class="open-window-text" onclick="openModal()">≡</span>
+        </h1>
+        <nav id="bigScreenNav" class="navBar">
+            <ul>
+                <li><a href="/home.html" class="nav-button">HOME</a></li>
+                <li class="nav-item dropdown">
+                    <div class="dropdown">
+                        <a href="#" class="nav-button">NEWS</a>
+                        <div class="dropdown-content">
+                            <a href="/nationalnews.html">INDIA</a>
+                            <a href="/internationalnews.html">WORLD</a>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="/people.html" class="nav-button">PEOPLE</a></li>
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-button">CAREER</a>
+                    <div class="dropdown-content">
+                        <a href="/education.html">HIGHER STUDIES</a>
+                        <a href="/comingsoon.html">INFO</a>
+                        <a href="/ngo.html">NGOs</a>
+                        <a href="/comingsoon.html">JOBS</a>
+                        <a href="/ministries.html">MINISTRIES</a>
+                    </div>
+                </li>
+                <li><a href="/people.html" class="nav-button">CONNECT</a></li>
+
+                <li class="nav-item dropdown">
+                    <div class="dropdown">
+                        <a href="#" class="nav-button">LEGISLATIONS</a>
+                        <div class="dropdown-content">
+                            <a href="/ngt.html">NGT</a>
+                            <a href="/laws.html">LAWS</a>
+                            <a href="/comingsoon.html">ACTS</a>
+                            <a href="/comingsoon.html">NOTIFICATIONS</a>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="/comingsoon.html" class="nav-button">ABOUT US</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <!-- Modal Window -->
+    <div class="modal-container" id="modal">
+        <div class="modal-content">
+            <span class="close-modal-button" onclick="closeModal()">&times;</span>
+            <!-- Content for the modal window (navigation buttons) -->
+            <nav>
+                <ul>
+                    <li><a href="/home.html" class="nav-button">HOME</a></li>
+                    <li class="nav-item dropdown">
+                        <div class="dropdown">
+                            <a href="#" class="nav-button">NEWS</a>
+                            <div class="dropdown-content">
+                                <a href="/comingsoon.html">INDIA</a>
+                                <a href="/comingsoon.html">WORLD</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="/people.html" class="nav-button">PEOPLE</a></li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-button">CAREER</a>
+                        <div class="dropdown-content">
+                            <a href="/education.html">HIGHER STUDIES</a>
+                            <a href="/comingsoon.html">INFO</a>
+                            <a href="/ngo.html">NGOs</a>
+                            <a href="/comingsoon.html">JOBS</a>
+                            <a href="/ministries.html">MINISTRIES</a>
+                        </div>
+                    </li>
+                    <li><a href="/comingsoon.html" class="nav-button">CONNECT</a></li>
+
+                    <li class="nav-item dropdown">
+                        <div class="dropdown">
+                            <a href="#" class="nav-button">LEGISLATIONS</a>
+                            <div class="dropdown-content">
+                                <a href="/ngt.html">NGT</a>
+                                <a href="/laws.html">LAWS</a>
+                                <a href="/comingsoon.html">ACTS</a>
+                                <a href="/comingsoon.html">NOTIFICATIONS</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="/comingsoon.html" class="nav-button">ABOUT US</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <script>
+        const navButton = document.getElementById("mobileNavButton");
+        const bigScreenNavButton = document.getElementById("bigScreenNav");
+        const modal = document.getElementById("modal");
+        const earth = document.getElementById("earth");
+
+        // Check if the user is on a mobile device
+        const isMobileNav = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
+        if (isMobileNav) {
+            navButton.style.display = 'block';
+            bigScreenNavButton.style.display = 'none';
+            modal.style.display = 'none';
+
+        }
+
+        else {
+            navButton.style.display = 'none';
+            modal.style.display = 'none';
+        }
+        // JavaScript functions to open and close the modal window
+        function openModal() {
+            const modal = document.getElementById('modal');
+            modal.style.display = 'flex';
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('modal');
+            modal.style.display = 'none';
+        }
+
+        window.addEventListener('click', function (event) {
+            const modal = document.getElementById('modal');
+            if (event.target === modal) {
+                closeModal();
+            }
+        });
+    </script>
+
+    <script src="navBarScroll.js"></script>
+
+    <div class="background" id="earth"></div>
+
+    <div class="scroll-down-button" id="scroll-down-button">⬇️</div>
+    <script>
+        // JavaScript to show the scroll-down button on mobile devices
+        const scrollDownButton = document.getElementById("scroll-down-button");
+
+        // Check if the user is on a mobile device
+        const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
+        if (isMobile) {
+            scrollDownButton.style.display = "block"; // Show the button on mobile devices
+        }
+
+        // Add a click event listener to scroll to the next section
+        scrollDownButton.addEventListener("click", () => {
+            window.scrollBy({
+                top: window.innerHeight,
+                behavior: "smooth"
+            });
+        });
+
+    </script>
+
+    <section class="people-container">
+        <div class="people-background" id="people-background"></div>
+        <h2 class="latest-people-heading">Green Geniuses:</h2>
+
+        <div class="people-row">
+            <div class="person" id="person1">
+                <a href="https://en.wikipedia.org/wiki/Jadav_Payeng" target="_blank">
+                    <!-- Replace with the actual URL -->
+                    <img src="jadav.jpg" alt="Jadav Payeng">
+                </a>
+                <div class="person-details">
+                    <h3 class="person-name">Jadav Payeng</h3>
+                    <p class="person-designation">Forester</p>
+                </div>
+            </div>
+
+            <!-- Person 2 -->
+            <div class="person" id="person2">
+                <a href="https://en.wikipedia.org/wiki/Sonam_Wangchuk_(engineer)" target="_blank">
+                    <!-- Replace with the actual URL -->
+                    <img src="sonam.gif" alt="Sonam Wangchuk">
+                </a>
+                <div class="person-details">
+                    <h3 class="person-name">Sonam Wangchuk</h3>
+                    <p class="person-designation">Innovator</p>
+                </div>
+            </div>
+
+            <!-- Person 3 -->
+            <div class="person" id="person3">
+                <a href="https://en.wikipedia.org/wiki/Vandana_Shiva" target="_blank">
+                    <!-- Replace with the actual URL -->
+                    <img src="vandana.png" alt="Vandana Shiva">
+                </a>
+                <div class="person-details">
+                    <h3 class="person-name">Vandana Shiva</h3>
+                    <p class="person-designation">Ecofeminist</p>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="people-row">
+
+            <div class="person" id="person4">
+                <a href="https://en.wikipedia.org/wiki/Rajendra_Singh" target="_blank">
+                    <!-- Replace with the actual URL -->
+                    <img src="rajendra.jpg" alt="Rajendra Singh">
+                </a>
+                <div class="person-details">
+                    <h3 class="person-name">Rajendra Singh</h3>
+                    <p class="person-designation">Water Conservationist</p>
+                </div>
+            </div>
+
+            <!-- Person 5 -->
+            <div class="person" id="person5">
+                <a href="https://en.wikipedia.org/wiki/Greta_Thunberg" target="_blank">
+                    <!-- Replace with the actual URL -->
+                    <img src="greta.jpeg" alt="Sonam Wangchuk">
+                </a>
+                <div class="person-details">
+                    <h3 class="person-name">Greta Thunberg</h3>
+                    <p class="person-designation">Environmental Activist</p>
+                </div>
+            </div>
+
+            <!-- Person 6 -->
+            <div class="person" id="person6">
+                <a href="https://en.wikipedia.org/wiki/David_Attenborough" target="_blank">
+                    <!-- Replace with the actual URL -->
+                    <img src="David.jpg" alt="David Attenborough">
+                </a>
+                <div class="person-details">
+                    <h3 class="person-name">David Attenborough</h3>
+                    <p class="person-designation">Natural Historian</p>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <div class="people-row">
+
+            <div class="person" id="person7">
+                <a href="https://en.wikipedia.org/wiki/Roz_Savage" target="_blank">
+                    <!-- Replace with the actual URL -->
+                    <img src="roz.jpg" alt="Rajendra Singh">
+                </a>
+                <div class="person-details">
+                    <h3 class="person-name">Roz Savage</h3>
+                    <p class="person-designation">Environmental Advocate</p>
+                </div>
+            </div>
+
+            <!-- Person 8 -->
+            <div class="person" id="person8">
+                <a href="https://en.wikipedia.org/wiki/E._O._Wilson" target="_blank">
+                    <!-- Replace with the actual URL -->
+                    <img src="Eo wilson.jpg" alt="E. O. Wilson">
+                </a>
+                <div class="person-details">
+                    <h3 class="person-name">E. O. Wilson</h3>
+                    <p class="person-designation">Naturalist</p>
+                </div>
+            </div>
+
+            <!-- Person 9 -->
+            <div class="person" id="person9">
+                <a href="https://en.wikipedia.org/wiki/Wangari_Maathai" target="_blank">
+                    <!-- Replace with the actual URL -->
+                    <img src="wangari.jpg" alt="Wangari Maathai">
+                </a>
+                <div class="person-details">
+                    <h3 class="person-name">Wangari Maathai</h3>
+                    <p class="person-designation">Environmental Activist</p>
+                </div>
+            </div>
+        </div>
+
+
+
+    </section>
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var newsContainer = document.querySelector('.people-container');
+            var earthBackground = document.getElementById('earth');
+            var newsBackground = document.getElementById('people-background');
+            const isMobileNav = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
+
+            var handleScroll = function () {
+                var containerTop = newsContainer.getBoundingClientRect().top;
+
+                if (containerTop <= window.innerHeight) {
+                    if (isMobileNav) {
+
+                    }
+                    else {
+                        // News container is visible
+                        earthBackground.style.opacity = 0;
+                        newsBackground.style.opacity = 1;
+                        newsBackground.style.visibility = 'visible';
+
+                        // Trigger the animation
+                        newsContainer.classList.add('animate-up');
+                        newsBackground.style.opacity = 0.2;
+                    }
+
+
+                } else {
+                    if (isMobileNav) {
+
+                    }
+
+                    else {
+                        // Earth background is visible
+                        earthBackground.style.opacity = 1;
+                        newsBackground.style.opacity = 0;
+                        newsBackground.style.visibility = 'hidden';
+
+                        // Reset the animation
+                        newsContainer.classList.remove('animate-up');
+                    }
+
+                }
+            };
+
+            window.addEventListener('scroll', handleScroll);
+        });
+    </script>
+
+    <footer>
+        <p>&copy; 2023 Get Immortal Earth</p>
+
+    </footer>
+</body>
+
+</html>

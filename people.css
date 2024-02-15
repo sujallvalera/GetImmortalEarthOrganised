@@ -1,0 +1,558 @@
+    /* Reset some default styles */
+    body,
+    h1,
+    h2,
+    p {
+        margin: 0;
+        padding: 0;
+
+    }
+
+    body {
+        font-family: "Kanit", sans-serif;
+        color: #333;
+
+    }
+
+    body {
+        background-color: rgb(0, 0, 0);
+
+    }
+
+    header {
+        color: rgb(0, 0, 0);
+        padding: 30px;
+        text-align: center;
+        border-bottom: 4px solid rgba(0, 0, 0, 0)
+            /* White line at the bottom of the header */
+    }
+
+    header.navigation {
+        font-family: "Kanit", sans-serif;
+        margin-right: 0px;
+        text-align: center;
+
+    }
+
+
+    .navigation {
+        top: 0;
+        position: relative;
+        z-index: 100;
+        background-color: transparent;
+        /* Initial background color */
+        transition: background-color 0.3s ease;
+    }
+
+
+    .sticky {
+        position: fixed;
+        top: 0px;
+        width: 100%;
+        transform: translateY(0);
+        /* Resetting transform for sticky state */
+        margin-top: -50px;
+        margin-left: -30px;
+        background-color: #000000;
+        /* Set your preferred background color */
+        animation: fadeInDown 0.5s ease;
+
+    }
+
+    @keyframes fadeInDown {
+        from {
+            opacity: 0;
+            transform: translateY(-20px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .navigation h1 {
+        transition: opacity 0.3s ease;
+        /* Smoother transition for hiding the heading */
+    }
+
+    nav ul {
+        padding: 50px;
+        list-style: none;
+        text-align: center;
+        /* Left-align the navigation links */
+        margin-left: 70px;
+        /* Remove any default margin */
+        padding-left: 0;
+        /* Remove any default padding */
+        margin-bottom: -60px;
+        margin-top: 30px;
+        background-color: #000000;
+        top: 20px;
+    }
+
+
+    nav ul li {
+        font-size: x-large;
+        display: inline;
+        margin-right: 20px;
+        margin-left: 0;
+        /* Remove left margin */
+    }
+
+    nav a {
+        text-decoration: none;
+        color: #000000;
+        font-weight: bold;
+    }
+
+    .nav-button {
+        background-color: #1a7431;
+        /* Greenish-blue color for buttons */
+        color: #fff;
+        padding: 10px 20px;
+        /* Add padding to the buttons */
+        border-radius: 5px;
+        text-decoration: none;
+        /* Remove underline from links */
+        transition: background-color 0.3s ease;
+        /* Add a smooth transition effect */
+    }
+
+    /* Hover effect for navigation buttons */
+    .nav-button:hover {
+        background-color: #45A049;
+        /* Darker shade when hovered */
+    }
+
+    /* Dropdown menu */
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+
+    /* Dropdown menu */
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #00000000;
+        min-width: 160px;
+        z-index: 2;
+        top: 127%;
+        /* Position the dropdown from the center of the button */
+        left: 0;
+
+    }
+
+    .dropdown-content a {
+        color: #333;
+        padding: 8px 16px;
+        text-decoration: none;
+        display: block;
+        background-color: #207438;
+        /* Background color for the buttons */
+        color: #fff;
+        /* Text color for the buttons */
+        font-size: 23.5px;
+        /* Font size for the buttons */
+        transition: background-color 0.3s ease;
+        /* Smooth background color transition */
+        border-radius: 5px;
+        /* Make buttons round */
+
+    }
+
+    .dropdown-content a:hover {
+        background-color: #1a5c2b;
+        /* Darker shade when hovered */
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+
+    /* Style for the scroll-down button */
+    .scroll-down-button {
+        display: none;
+        /* Initially hide the button */
+        position: fixed;
+        bottom: 30px;
+        right: 20px;
+        width: 25px;
+        height: 25px;
+        background-color: rgba(0, 0, 0, 0);
+        color: black;
+        border-radius: 50%;
+        cursor: pointer;
+        text-align: center;
+        opacity: 0.8;
+        z-index: 1000;
+    }
+
+    * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+        position: relative;
+    }
+
+    .background {
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        z-index: -1;
+        transition: opacity 0.3s ease;
+    }
+
+    .background::before {
+        content: '';
+        background-image: url('https://epic.gsfc.nasa.gov/archive/natural/2023/12/02/png/epic_1b_20231202061001.png');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: contain;
+        background-position: center;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+
+    /* Updated CSS for news-container section with added spacing */
+    .people-container {
+        background-color: #fff;
+        /* White container background for news section */
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0px 0px 100px rgba(255, 255, 255, 0.3);
+        max-width: 1100px;
+        /* Limit the width of the container */
+        text-align: left;
+        /* Left-align content within the container */
+        margin: 20px auto;
+        /* Center the news container horizontally and add spacing */
+        background-color: #000000;
+        position: relative;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .latest-people-heading {
+        color: #1a7431;
+        font-size: 30px;
+        margin-bottom: 10px;
+        margin-right: -20px;
+
+    }
+
+    .people-row {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .person {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        align-items: center;
+        text-align: center;
+        transition: transform 0.3s ease;
+        padding: 10px;
+        background-color: #f9f9f9;
+        border-radius: 10px;
+        box-shadow: 0px 0px 50px rgba(255, 255, 255, 0.3);
+        max-width: 300px;
+    }
+
+    .person img {
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+
+    .person-name {
+        font-weight: bold;
+        margin-top: 10px;
+    }
+
+    .person-designation {
+        color: #888;
+        margin-top: 5px;
+    }
+
+    .person:hover {
+        transform: scale(1.05);
+    }
+
+    @media (max-width: 768px) {
+        .people-row {
+            flex-direction: column;
+            /* Change to vertical layout */
+            align-items: center;
+            /* Center items horizontally */
+        }
+
+        .person {
+            width: 300px;
+            margin-bottom: 20px;
+            /* Add space between individuals */
+        }
+    }
+
+
+    .people-container .people-background {
+        /* Your background styles for the news container */
+        background-image: url('https://epic.gsfc.nasa.gov/archive/natural/2023/12/02/png/epic_1b_20231202061001.png');
+        background-size: cover;
+        background-position: center;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        transition: opacity 2s ease;
+        visibility: hidden;
+
+    }
+
+    .people-container.animate-up {
+        animation: moveUp 0.8s ease forwards;
+    }
+
+    @keyframes moveUp {
+        to {
+            opacity: 1;
+            transform: translateY(-50vh);
+        }
+    }
+
+    .people-container h2 {
+        color: #1a7431;
+        /* Greenish-blue color for news section headings */
+        font-size: 30px;
+        /* Enlarge the <h2> font size */
+        margin-bottom: 10px;
+        /* Add spacing below the section heading */
+        text-align: left;
+    }
+
+    .latest-people-heading {
+        text-align: center;
+        /* Align only the "Latest News" heading to the center */
+        padding-left: 20px;
+    }
+
+
+    footer {
+        background-color: #1a7431;
+        /* Greenish-blue color for the footer */
+        color: #fff;
+        text-align: center;
+        padding: 10px;
+        border-top: 4px solid #fff;
+        /* White line just above the footer */
+    }
+
+    h1 {
+        font-size: 50px;
+        /* Enlarge the <h1> font size */
+        /* text-align: center; */
+        margin-left: 25px;
+    }
+
+
+    /* Your existing CSS styles here */
+
+    /* CSS for the button to open the window */
+    .open-window-button {
+        float: right;
+        font-size: 24px;
+        cursor: pointer;
+    }
+
+    /* CSS for the modal window */
+    .modal-container {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(69, 64, 64, 0.89);
+        z-index: 10000;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .modal-content {
+        background-color: #000000;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    }
+
+    .close-modal-button {
+        position: absolute;
+        right: 20px;
+        font-size: 40px;
+        cursor: pointer;
+    }
+
+    /* CSS for mobile screens */
+    @media screen and (max-width: 768px) {
+
+        .sticky {
+            position: fixed;
+            top: 0px;
+            width: 100%;
+            transform: translateY(0);
+            background-color: #000000;
+            /* Set your preferred background color */
+            animation: fadeInDown 0.5s ease;
+            margin-top: auto;
+            margin-left: auto;
+
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+
+        .background {
+            display: none;
+        }
+
+
+        header {
+            padding: 10px;
+            text-align: center;
+            /* Center-align the navigation links and heading */
+            /* Reduce header padding for mobile */
+        }
+
+        header.navigation h1 {
+            font-size: 30px;
+            /* Reduce heading font size for mobile */
+            margin-bottom: 0px;
+            /* Reduce space below the heading */
+            list-style: none;
+            padding-bottom: 0px;
+        }
+
+        nav ul {
+            text-align: center;
+            /* Center-align the navigation links */
+            margin-left: 0;
+            padding-left: 50px;
+            padding: 10px;
+            margin-bottom: 30px;
+        }
+
+
+        nav ul li {
+            display: block;
+            /* Display nav items as blocks for vertical alignment */
+            margin-right: 0;
+            /* Remove margin between nav items */
+            margin-bottom: 10px;
+            /* Add margin between nav items */
+
+        }
+
+        .nav-button {
+            padding: 8px 16px;
+            /* Adjust button padding for mobile */
+            font-size: 20px;
+            /* Adjust button font size for mobile */
+            display: inline-block;
+            /* Display buttons as inline-block for horizontal alignment */
+            /* Center-align buttons horizontally */
+        }
+
+        .dropdown-content {
+            min-width: 120px;
+            display: none;
+            position: absolute;
+            background-color: #f9f9f900;
+            z-index: 2;
+            top: 100%;
+            /* Position the dropdown from the center of the button */
+            left: 0;
+            /* Adjust the minimum width of the dropdown */
+        }
+
+        .dropdown-content a {
+            padding: 8px 16px;
+            text-decoration: none;
+            display: block;
+            background-color: #207438;
+            /* Background color for the buttons */
+            color: #fff;
+            /* Text color for the buttons */
+            font-size: 19px;
+            /* Font size for the buttons */
+            transition: background-color 0.3s ease;
+            /* Smooth background color transition */
+            border-radius: 5px;
+            /* Make buttons round */
+        }
+
+        #mobileNavButton {
+            color: white;
+        }
+
+
+        #mobileNavButton {
+            display: inline-block;
+            cursor: pointer;
+        }
+
+        header h1 {
+            margin-right: 120px;
+            margin-left: 0;
+            display: flex;
+            /* Use flex layout */
+            justify-content: space-between;
+            /* Space between elements */
+            align-items: center;
+            /* Center vertically */
+        }
+
+        header h1 span {
+            padding: 5px;
+        }
+
+        header h1 #mobileNavButton {
+            padding-left: 50px;
+        }
+
+
+        .latest-people-heading {
+            margin-left: -30px;
+        }
+
+
+    }

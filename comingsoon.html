@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Immortal Earth</title>
+    <link rel="stylesheet" type="text/css" href="comingsoon.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Kanit">
+    <script src="https://climateclock.world/widget-v2.js" async></script>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <header>
+        <climate-clock />
+    </header>
+    <header class="navigation">
+        <h1 style="margin-left: 0;"><span style="color: #d82f31">GET</span>
+            <span style="color: #4aa1cc"> IMMORTAL </span>
+            <span>🌍</span>
+            <span id="mobileNavButton" class="open-window-text" onclick="openModal()">≡</span>
+        </h1>
+        <nav id="bigScreenNav" class="navBar">
+            <ul>
+                <li><a href="/home.html" class="nav-button">HOME</a></li>
+                <li class="nav-item dropdown">
+                    <div class="dropdown">
+                        <a href="#" class="nav-button">NEWS</a>
+                        <div class="dropdown-content">
+                            <a href="/nationalnews.html">INDIA</a>
+                            <a href="/internationalnews.html">WORLD</a>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="/people.html" class="nav-button">PEOPLE</a></li>
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-button">CAREER</a>
+                    <div class="dropdown-content">
+                        <a href="/education.html">HIGHER STUDIES</a>
+                        <a href="/comingsoon.html">INFO</a>
+                        <a href="/ngo.html">NGOs</a>
+                        <a href="/comingsoon.html">JOBS</a>
+                        <a href="/ministries.html">MINISTRIES</a>
+                    </div>
+                </li>
+                <li><a href="/people.html" class="nav-button">CONNECT</a></li>
+
+                <li class="nav-item dropdown">
+                    <div class="dropdown">
+                        <a href="#" class="nav-button">LEGISLATIONS</a>
+                        <div class="dropdown-content">
+                            <a href="/ngt.html">NGT</a>
+                            <a href="/laws.html">LAWS</a>
+                            <a href="/comingsoon.html">ACTS</a>
+                            <a href="/comingsoon.html">NOTIFICATIONS</a>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="/comingsoon.html" class="nav-button">ABOUT US</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <!-- Modal Window -->
+    <div class="modal-container" id="modal">
+        <div class="modal-content">
+            <span class="close-modal-button" onclick="closeModal()">&times;</span>
+            <!-- Content for the modal window (navigation buttons) -->
+            <nav>
+                <ul>
+                    <li><a href="/home.html" class="nav-button">HOME</a></li>
+                    <li class="nav-item dropdown">
+                        <div class="dropdown">
+                            <a href="#" class="nav-button">NEWS</a>
+                            <div class="dropdown-content">
+                                <a href="/comingsoon.html">INDIA</a>
+                                <a href="/comingsoon.html">WORLD</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="/people.html" class="nav-button">PEOPLE</a></li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-button">CAREER</a>
+                        <div class="dropdown-content">
+                            <a href="/education.html">HIGHER STUDIES</a>
+                            <a href="/comingsoon.html">INFO</a>
+                            <a href="/ngo.html">NGOs</a>
+                            <a href="/comingsoon.html">JOBS</a>
+                            <a href="/ministries.html">MINISTRIES</a>
+                        </div>
+                    </li>
+                    <li><a href="/comingsoon.html" class="nav-button">CONNECT</a></li>
+
+                    <li class="nav-item dropdown">
+                        <div class="dropdown">
+                            <a href="#" class="nav-button">LEGISLATIONS</a>
+                            <div class="dropdown-content">
+                                <a href="/ngt.html">NGT</a>
+                                <a href="/laws.html">LAWS</a>
+                                <a href="/comingsoon.html">ACTS</a>
+                                <a href="/comingsoon.html">NOTIFICATIONS</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="/comingsoon.html" class="nav-button">ABOUT US</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <script>
+        const navButton = document.getElementById("mobileNavButton");
+        const bigScreenNavButton = document.getElementById("bigScreenNav");
+        const modal = document.getElementById("modal");
+        const earth = document.getElementById("earth");
+
+        // Check if the user is on a mobile device
+        const isMobileNav = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
+        if (isMobileNav) {
+            navButton.style.display = 'block';
+            bigScreenNavButton.style.display = 'none';
+            modal.style.display = 'none';
+
+        }
+
+        else {
+            navButton.style.display = 'none';
+            modal.style.display = 'none';
+        }
+        // JavaScript functions to open and close the modal window
+        function openModal() {
+            const modal = document.getElementById('modal');
+            modal.style.display = 'flex';
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('modal');
+            modal.style.display = 'none';
+        }
+
+        window.addEventListener('click', function (event) {
+            const modal = document.getElementById('modal');
+            if (event.target === modal) {
+                closeModal();
+            }
+        });
+    </script>
+
+    <script src="navBarScroll.js"></script>
+
+    <div class="background" id="earth"></div>
+
+    <div class="scroll-down-button" id="scroll-down-button">⬇️</div>
+    <script>
+        // JavaScript to show the scroll-down button on mobile devices
+        const scrollDownButton = document.getElementById("scroll-down-button");
+
+        // Check if the user is on a mobile device
+        const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
+        if (isMobile) {
+            scrollDownButton.style.display = "block"; // Show the button on mobile devices
+        }
+
+        // Add a click event listener to scroll to the next section
+        scrollDownButton.addEventListener("click", () => {
+            window.scrollBy({
+                top: window.innerHeight,
+                behavior: "smooth"
+            });
+        });
+
+    </script>
+
+
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            overflow-x: auto;
+            margin-left: -10px;
+            margin-top: 20px;
+
+        }
+
+        th,
+        td {
+            border: 1px solid #1a7431;
+            text-align: left;
+            padding: 8px;
+            color: rgb(255, 255, 255);
+            font-size: 18px;
+        }
+
+        td {
+            font-weight: normal;
+        }
+
+        th {
+            background-color: rgba(0, 0, 0, 0);
+            margin-left: 20px;
+        }
+
+        td a {
+            color: white;
+        }
+
+
+        td a:visited {
+            color: #1a7431;
+        }
+
+        @media only screen and (max-width: 768px) {
+
+            .table-heading p {
+                font-size: 18px;
+                text-align: center;
+                padding: auto;
+                margin-right: 30px;
+            }
+
+
+            td,
+            th {
+                font-size: 12px;
+                padding: 3px;
+                /* Adjust padding for better mobile layout */
+                align-items: center;
+            }
+
+            td a {
+                padding: 4px 6px;
+                /* Adjust padding for better mobile layout */
+            }
+
+        }
+    </style>
+
+    <style>
+        .table-container {
+            align-items: center;
+            justify-content: center;
+            justify-items: center;
+        }
+
+
+        .coming-soon-text p {
+            font-size: 30px;
+            background: linear-gradient(to right, #134e7f, #5ca08e, #c0c393, #e5b684, #965b3e);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        #countdown {
+            font-size: 30px;
+            background: linear-gradient(to right, #3d1f0b, #5a2e12, #89765c, #b3ad7b, #6b8c5a);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-align: center;
+            font-weight: bold;
+
+        }
+    </style>
+
+    <section class="table-container">
+        <div class="table-background" id="table-background"></div>
+        <div class="coming-soon-text">
+            <p>WE ARE WORKING HARD TO BRING YOU SOMETHING AMAZING!</p>
+            <p>STAY TUNED WE'LL BE LAUNCHING SOON.</p>
+        </div>
+        <div class="countdown">
+            <p id="countdown"></p>
+        </div>
+    </section>
+
+    <script>
+        // Set the date we're counting down to
+        var countDownDate = new Date("Mar 1, 2024 00:00:00").getTime();
+
+        // Update the countdown every 1 second
+        var x = setInterval(function () {
+
+            // Get the current date and time
+            var now = new Date().getTime();
+
+            // Find the distance between now and the countdown date
+            var distance = countDownDate - now;
+
+            // Calculate days, hours, minutes, and seconds
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            // Display the countdown
+            document.getElementById("countdown").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+
+            // If the countdown is over, display a message
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("countdown").innerHTML = "EXPIRED";
+            }
+        }, 1000);
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var tableContainer = document.querySelector('.table-container');
+            var earthBackground = document.getElementById('earth');
+            var tableBackground = document.getElementById('table-background');
+            const isMobileNav = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
+
+            var handleScroll = function () {
+                var containerTop = tableContainer.getBoundingClientRect().top;
+
+                if (containerTop <= window.innerHeight) {
+                    if (isMobileNav) {
+
+                    }
+                    else {
+                        // News container is visible
+                        earthBackground.style.opacity = 0;
+                        tableBackground.style.opacity = 1;
+                        tableBackground.style.visibility = 'visible';
+
+                        // Trigger the animation
+                        tableContainer.classList.add('animate-up');
+                        tableBackground.style.opacity = 0.2;
+                    }
+
+
+                } else {
+                    if (isMobileNav) {
+
+                    }
+
+                    else {
+                        // Earth background is visible
+                        earthBackground.style.opacity = 1;
+                        tableBackground.style.opacity = 0;
+                        tableBackground.style.visibility = 'hidden';
+
+                        // Reset the animation
+                        tableContainer.classList.remove('animate-up');
+                    }
+
+                }
+            };
+
+            window.addEventListener('scroll', handleScroll);
+        });
+    </script>
+
+    <footer>
+        <p>&copy; 2023 Get Immortal Earth</p>
+
+    </footer>
+</body>
+
+</html>

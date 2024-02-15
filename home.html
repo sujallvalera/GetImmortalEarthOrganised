@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Immortal Earth</title>
+    <link rel="stylesheet" type="text/css" href="home.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Kanit">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <script src="https://climateclock.world/widget-v2.js" async></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <header>
+        <climate-clock />
+    </header>
+    <header class="navigation">
+        <h1 style="margin-left: 0;"><span style="color: #d82f31">GET</span>
+            <span style="color: #4aa1cc"> IMMORTAL </span>
+            <span>🌍</span>
+            <span id="mobileNavButton" class="open-window-text" onclick="openModal()">≡</span>
+        </h1>
+        <nav id="bigScreenNav" class="navBar">
+            <ul>
+                <li><a href="/home.html" class="nav-button">HOME</a></li>
+                <li class="nav-item dropdown">
+                    <div class="dropdown">
+                        <a href="#" class="nav-button">NEWS</a>
+                        <div class="dropdown-content">
+                            <a href="/nationalnews.html">INDIA</a>
+                            <a href="/internationalnews.html">WORLD</a>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="/people.html" class="nav-button">PEOPLE</a></li>
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-button">CAREER</a>
+                    <div class="dropdown-content">
+                        <a href="/education.html">HIGHER STUDIES</a>
+                        <a href="/comingsoon.html">INFO</a>
+                        <a href="/ngo.html">NGOs</a>
+                        <a href="/comingsoon.html">JOBS</a>
+                        <a href="/ministries.html">MINISTRIES</a>
+                    </div>
+                </li>
+                <li><a href="/people.html" class="nav-button">CONNECT</a></li>
+
+                <li class="nav-item dropdown">
+                    <div class="dropdown">
+                        <a href="#" class="nav-button">LEGISLATIONS</a>
+                        <div class="dropdown-content">
+                            <a href="/ngt.html">NGT</a>
+                            <a href="/laws.html">LAWS</a>
+                            <a href="/comingsoon.html">ACTS</a>
+                            <a href="/comingsoon.html">NOTIFICATIONS</a>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="/comingsoon.html" class="nav-button">ABOUT US</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <!-- Modal Window -->
+    <div class="modal-container" id="modal">
+        <div class="modal-content">
+            <span class="close-modal-button" onclick="closeModal()">&times;</span>
+            <!-- Content for the modal window (navigation buttons) -->
+            <nav>
+                <ul>
+                    <li><a href="/home.html" class="nav-button">HOME</a></li>
+                    <li class="nav-item dropdown">
+                        <div class="dropdown">
+                            <a href="#" class="nav-button">NEWS</a>
+                            <div class="dropdown-content">
+                                <a href="/comingsoon.html">INDIA</a>
+                                <a href="/comingsoon.html">WORLD</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="/people.html" class="nav-button">PEOPLE</a></li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-button">CAREER</a>
+                        <div class="dropdown-content">
+                            <a href="/education.html">HIGHER STUDIES</a>
+                            <a href="/comingsoon.html">INFO</a>
+                            <a href="/ngo.html">NGOs</a>
+                            <a href="/comingsoon.html">JOBS</a>
+                            <a href="/ministries.html">MINISTRIES</a>
+                        </div>
+                    </li>
+                    <li><a href="/comingsoon.html" class="nav-button">CONNECT</a></li>
+
+                    <li class="nav-item dropdown">
+                        <div class="dropdown">
+                            <a href="#" class="nav-button">LEGISLATIONS</a>
+                            <div class="dropdown-content">
+                                <a href="/ngt.html">NGT</a>
+                                <a href="/laws.html">LAWS</a>
+                                <a href="/comingsoon.html">ACTS</a>
+                                <a href="/comingsoon.html">NOTIFICATIONS</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="/comingsoon.html" class="nav-button">ABOUT US</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <script>
+        const navButton = document.getElementById("mobileNavButton");
+        const bigScreenNavButton = document.getElementById("bigScreenNav");
+        const modal = document.getElementById("modal");
+        const earth = document.getElementById("earth");
+
+        // Check if the user is on a mobile device
+        const isMobileNav = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
+        if (isMobileNav) {
+            navButton.style.display = 'block';
+            bigScreenNavButton.style.display = 'none';
+            modal.style.display = 'none';
+
+        }
+
+        else {
+            navButton.style.display = 'none';
+            modal.style.display = 'none';
+        }
+        // JavaScript functions to open and close the modal window
+        function openModal() {
+            const modal = document.getElementById('modal');
+            modal.style.display = 'flex';
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('modal');
+            modal.style.display = 'none';
+        }
+
+        window.addEventListener('click', function (event) {
+            const modal = document.getElementById('modal');
+            if (event.target === modal) {
+                closeModal();
+            }
+        });
+    </script>
+
+    <script src="navBarScroll.js"></script>
+
+    <div class="background" id="earth"></div>
+
+    <div class="scroll-down-button" id="scroll-down-button">⬇️</div>
+    <script>
+        // JavaScript to show the scroll-down button on mobile devices
+        const scrollDownButton = document.getElementById("scroll-down-button");
+
+        // Check if the user is on a mobile device
+        const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
+        if (isMobile) {
+            scrollDownButton.style.display = "block"; // Show the button on mobile devices
+        }
+
+        // Add a click event listener to scroll to the next section
+        scrollDownButton.addEventListener("click", () => {
+            window.scrollBy({
+                top: window.innerHeight,
+                behavior: "smooth"
+            });
+        });
+
+    </script>
+
+    <section class="news-container">
+        <div class="news-background" id="news-background"></div>
+        <h2 class="latest-news-heading">Latest News:</h2>
+
+        <!-- news 1 -->
+        <div class="news-post">
+            <h2 id="news-title">Loading...</h2>
+            <p class="post-meta" id="post-meta">Loading...</p>
+            <p id="keywords">Loading...</p>
+            <a id="news-link" href="#">Read more</a>
+        </div>
+
+        <script>
+            fetch('http://localhost:5500/news/0')
+                .then(response => response.json())
+                .then(data => {
+                    const title = data.title;
+                    const lastUpdatedOn = data.lastUpdatedOn;
+                    const keywords = data.keywords;
+                    const url = data.url;
+
+                    document.getElementById('news-title').textContent = title;
+                    document.getElementById('post-meta').textContent = lastUpdatedOn;
+                    document.getElementById('keywords').textContent = 'Keywords: ' + keywords;
+
+                    const newsLink = document.getElementById('news-link');
+                    newsLink.href = url;
+                    newsLink.textContent = 'Read more';
+                })
+                .catch(error => {
+                    console.error('Error fetching data:', error);
+                });
+        </script>
+
+        <!-- news 2 -->
+        <div class="news-post">
+            <h2 id="news-title2">Loading...</h2>
+            <p class="post-meta" id="post-meta2">Loading...</p>
+            <p id="keywords2">Loading...</p>
+            <a id="news-link2" href="#">Read more</a>
+        </div>
+
+        <script>
+            // Fetch the JSON data for the second news post
+            fetch('http://localhost:5500/news/1')
+                .then(response => response.json())
+                .then(data => {
+                    // Extract data from the JSON for the second news post
+                    const title = data.title;
+                    const lastUpdatedOn = data.lastUpdatedOn;
+                    const keywords = data.keywords;
+                    const url = data.url;
+
+                    // Populate the HTML elements for the second news post with the extracted data
+                    document.getElementById('news-title2').textContent = title;
+                    document.getElementById('post-meta2').textContent = lastUpdatedOn;
+                    document.getElementById('keywords2').textContent = 'Keywords: ' + keywords;
+
+                    // Set the link's href attribute for the second news post
+                    const newsLink = document.getElementById('news-link2');
+                    newsLink.href = url;
+                    newsLink.textContent = 'Read more';
+                })
+                .catch(error => {
+                    console.error('Error fetching data for the second news post:', error);
+                });
+        </script>
+
+        <!-- news 3 -->
+        <div class="news-post">
+            <h2 id="news-title3">Loading...</h2>
+            <p class="post-meta" id="post-meta3">Loading...</p>
+            <p id="keywords3">Loading...</p>
+            <a id="news-link3" href="#">Read more</a>
+        </div>
+
+        <script>
+            // Fetch the JSON data for the third news post
+            fetch('http://localhost:5500/news/all')
+                .then(response => response.json())
+                .then(data => {
+                    // Extract data from the JSON for the third news post
+                    const title = data.title;
+                    const lastUpdatedOn = data.lastUpdatedOn;
+                    const keywords = data.keywords;
+                    const url = data.url;
+
+                    // Populate the HTML elements for the third news post with the extracted data
+                    document.getElementById('news-title3').textContent = title;
+                    document.getElementById('post-meta3').textContent = lastUpdatedOn;
+                    document.getElementById('keywords3').textContent = 'Keywords: ' + keywords;
+
+                    // Set the link's href attribute for the third news post
+                    const newsLink = document.getElementById('news-link3');
+                    newsLink.href = url;
+                    newsLink.textContent = 'Read more';
+                })
+                .catch(error => {
+                    console.error('Error fetching data for the third news post:', error);
+                });
+        </script>
+
+        <!-- news 4 -->
+        <div class="news-post">
+            <h2 id="news-title4">Loading...</h2>
+            <p class="post-meta" id="post-meta4">Loading...</p>
+            <p id="keywords4">Loading...</p>
+            <a id="news-link4" href="#">Read more</a>
+        </div>
+
+        <script>
+            // Fetch the JSON data for the fourth news post
+            fetch('http://localhost:5500/news/all')
+                .then(response => response.json())
+                .then(data => {
+                    // Extract data from the JSON for the fourth news post
+                    const title = data.title;
+                    const lastUpdatedOn = data.lastUpdatedOn;
+                    const keywords = data.keywords;
+                    const url = data.url;
+
+                    // Populate the HTML elements for the fourth news post with the extracted data
+                    document.getElementById('news-title4').textContent = title;
+                    document.getElementById('post-meta4').textContent = lastUpdatedOn;
+                    document.getElementById('keywords4').textContent = 'Keywords: ' + keywords;
+
+                    // Set the link's href attribute for the fourth news post
+                    const newsLink = document.getElementById('news-link4');
+                    newsLink.href = url;
+                    newsLink.textContent = 'Read more';
+                })
+                .catch(error => {
+                    console.error('Error fetching data for the fourth news post:', error);
+                });
+        </script>
+
+        <!-- news 4 -->
+        <div class="news-post">
+            <h2 id="news-title5">Loading...</h2>
+            <p class="post-meta" id="post-meta5">Loading...</p>
+            <p id="keywords5">Loading...</p>
+            <a id="news-link5" href="#">Read more</a>
+        </div>
+
+        <script>
+            // Fetch the JSON data for the fifth news post
+            fetch('http://localhost:5500/news/all')
+                .then(response => response.json())
+                .then(data => {
+                    // Extract data from the JSON for the fifth news post
+                    const title = data.title;
+                    const lastUpdatedOn = data.lastUpdatedOn;
+                    const keywords = data.keywords;
+                    const url = data.url;
+
+                    // Populate the HTML elements for the fifth news post with the extracted data
+                    document.getElementById('news-title5').textContent = title;
+                    document.getElementById('post-meta5').textContent = lastUpdatedOn;
+                    document.getElementById('keywords5').textContent = 'Keywords: ' + keywords;
+
+                    // Set the link's href attribute for the fifth news post
+                    const newsLink = document.getElementById('news-link5');
+                    newsLink.href = url;
+                    newsLink.textContent = 'Read more';
+                })
+                .catch(error => {
+                    console.error('Error fetching data for the fifth news post:', error);
+                });
+        </script>
+
+    </section>
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var newsContainer = document.querySelector('.news-container');
+            var earthBackground = document.getElementById('earth');
+            var newsBackground = document.getElementById('news-background');
+            const isMobileNav = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
+
+            var handleScroll = function () {
+                var containerTop = newsContainer.getBoundingClientRect().top;
+
+                if (containerTop <= window.innerHeight) {
+                    if (isMobileNav) {
+
+                    }
+                    else {
+                        // News container is visible
+                        earthBackground.style.opacity = 0;
+                        newsBackground.style.opacity = 1;
+                        newsBackground.style.visibility = 'visible';
+
+                        // Trigger the animation
+                        newsContainer.classList.add('animate-up');
+                        newsBackground.style.opacity = 0.2;
+                    }
+
+
+                } else {
+                    if (isMobileNav) {
+
+                    }
+
+                    else {
+                        // Earth background is visible
+                        earthBackground.style.opacity = 1;
+                        newsBackground.style.opacity = 0;
+                        newsBackground.style.visibility = 'hidden';
+
+                        // Reset the animation
+                        newsContainer.classList.remove('animate-up');
+                    }
+
+                }
+            };
+
+            window.addEventListener('scroll', handleScroll);
+        });
+    </script>
+    <section class="blogs-container">
+        <h2 class="latest-blogs-heading">Latest Blogs:</h2>
+
+        <!-- Blog 1 -->
+        <div class="blog-post">
+            <h2 id="blog-title">The Importance of Recycling</h2>
+            <p class="post-meta" id="blog-meta">Published on September 15, 2023</p>
+            <p>
+                Recycling is a crucial practice for preserving our environment and conserving valuable resources. In
+                this blog post, we explore the significance of recycling and its positive impact on reducing waste and
+                mitigating climate change.
+            </p>
+            <a id="blog-link" href="/blog/the-importance-of-recycling.html">Read more</a>
+        </div>
+
+        <!-- Blog 2 -->
+        <div class="blog-post">
+            <h2 id="blog-title">Exploring Sustainable Energy Sources</h2>
+            <p class="post-meta" id="blog-meta">Published on September 20, 2023</p>
+            <p>
+                Sustainable energy sources, such as solar and wind power, are revolutionizing the way we generate
+                electricity. In this blog post, we delve into the world of sustainable energy and its potential to
+                reduce greenhouse gas emissions and combat climate change.
+            </p>
+            <a id="blog-link" href="/blog/exploring-sustainable-energy-sources.html">Read more</a>
+        </div>
+
+        <!-- Blog 3 -->
+        <div class="blog-post">
+            <h2 id="blog-title">The Importance of Biodiversity Conservation</h2>
+            <p class="post-meta" id="blog-meta">Published on October 5, 2023</p>
+            <p>
+                Biodiversity conservation is vital for maintaining the health and balance of our ecosystems. In this
+                blog post, we explore the significance of preserving biodiversity, the threats it faces, and the role
+                each of us can play in protecting our planet's rich variety of life.
+            </p>
+            <a id="blog-link" href="/blog/the-importance-of-biodiversity-conservation.html">Read more</a>
+        </div>
+
+        <!-- Blog 4 -->
+        <div class="blog-post">
+            <h2 id="blog-title">Renewable Energy: A Path to a Sustainable Future</h2>
+            <p class="post-meta" id="blog-meta">Published on November 15, 2023</p>
+            <p>
+                Renewable energy sources like solar and wind power are key to achieving a sustainable future. In this
+                blog post, we delve into the benefits of renewable energy, its role in mitigating climate change, and
+                the need for a transition to cleaner and greener sources of power.
+            </p>
+            <a id="blog-link" href="/blog/renewable-energy-a-path-to-sustainable-future.html">Read more</a>
+        </div>
+
+        <!-- Blog 5 -->
+        <div class="blog-post">
+            <h2 id="blog-title">The Future of Sustainability: Bioplastics</h2>
+            <p class="post-meta" id="blog-meta">Published on September 15, 2023</p>
+            <p>
+                As the world seeks more sustainable alternatives to traditional plastics, bioplastics have emerged as a
+                promising solution. In this blog post, we delve into the world of bioplastics, exploring what they are,
+                how they are made, their environmental benefits, and their role in reducing plastic pollution.
+            </p>
+            <a id="blog-link" href="/blog/the-future-of-sustainability-bioplastics.html">Read more</a>
+        </div>
+
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Get Immortal Earth</p>
+
+    </footer>
+</body>
+
+</html>
